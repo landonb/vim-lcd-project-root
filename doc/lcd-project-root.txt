@@ -1,0 +1,24 @@
+*lcd-project-root.txt*  Sets working directory to Git project root or to file's dir.
+
+Set Project Root~
+
+Copier: Landon Bouma <https://tallybark.com/>
+License: https://creativecommons.org/publicdomain/zero/1.0/
+
+INTRODUCTION                                    *lcd-project-root*
+
+Sets the working directory when editing a new buffer to the file's
+Git project root, or to the file's parent directory.
+
+- Inspired by: "Sane Vim Working Directories"
+
+   http://inlehmansterms.net/2014/09/04/sane-vim-working-directories/
+
+Useful for builtin `find` and `grep` commands, as well as for search
+plugins like `CtrlP`, `Command-T`, and `fzf`. Also `vim-fugitive`-aware.
+
+COMMANDS                                        *lcd-project-root-commands*
+
+None. Runs on `BufRead *`, i.e., when starting to edit a new buffer.
+
+ vim:tw=78:ts=8:ft=help:norl:
