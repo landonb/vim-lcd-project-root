@@ -9,7 +9,7 @@ Git project root, or to the file's parent directory.
 
 Useful for builtin `find` and `grep` commands, as well as for
 search plugins like
-[CtrlP](https://github.com/kien/ctrlp.vim),
+[CtrlP](https://github.com/ctrlpvim/ctrlp.vim),
 [Command-T](https://github.com/wincent/command-t),
 and [fzf](https://github.com/junegunn/fzf).
 Also [vim-fugitive](https://github.com/tpope/vim-fugitive)-aware.
