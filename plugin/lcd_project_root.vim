@@ -4,14 +4,23 @@
 " License: https://creativecommons.org/publicdomain/zero/1.0/
 " vim:tw=0:ts=2:sw=2:et:norl:ft=vim
 
-" YOU: Uncomment the 'unlet', then <F9> to reload this file.
-"       https://github.com/landonb/vim-source-reloader
-"  silent! unlet g:loaded_lcd_project_root
+" -------------------------------------------------------------------
+
+" GUARD: Press <F9> to reload this plugin (or :source it).
+" - Via: https://github.com/embrace-vim/vim-source-reloader#↩️
+
+if expand("%:p") ==# expand("<sfile>:p")
+  unlet g:loaded_lcd_project_root
+endif
 
 if exists("g:loaded_lcd_project_root") || &cp || v:version < 700
+
   finish
 endif
+
 let g:loaded_lcd_project_root = 1
+
+" -------------------------------------------------------------------
 
 " Set the local working directory to the repo root, or
 " to directory of the current file if there's no repo.
