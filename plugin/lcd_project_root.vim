@@ -9,11 +9,11 @@
 " GUARD: Press <F9> to reload this plugin (or :source it).
 " - Via: https://github.com/embrace-vim/vim-source-reloader#↩️
 
-if expand("%:p") ==# expand("<sfile>:p")
-  unlet g:loaded_lcd_project_root
+if expand('%:p') ==# expand('<sfile>:p')
+  unlet! g:loaded_lcd_project_root
 endif
 
-if exists("g:loaded_lcd_project_root") || &cp || v:version < 700
+if exists('g:loaded_lcd_project_root') || &cp || v:version < 700
 
   finish
 endif
