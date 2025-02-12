@@ -30,7 +30,7 @@ let g:loaded_lcd_project_root = 1
 "   http://inlehmansterms.net/2014/09/04/sane-vim-working-directories/
 " - (lb): Added vim-fugitive support; and check git response non empty.
 
-function! SetProjectRoot()
+function! s:SetProjectRoot() abort
   " Check for special paths, e.g., vim-fugitive paths look like:
   "   fugitive:///repo/path/.git//SHA1XXXX/some/file
   if (expand('%:p') == '') || !empty(matchstr(expand('%:p'), '^fugitive://.*'))
@@ -47,5 +47,13 @@ function! SetProjectRoot()
   endif
 endfunction
 
-autocmd BufRead * call SetProjectRoot()
+function! s:CreateAutocommands() abort
+  augroup lcd_project_root.vim
+    autocmd!
+
+    autocmd BufRead * call <SID>SetProjectRoot()
+  augroup END
+endfunction
+
+call s:CreateAutocommands()
 
