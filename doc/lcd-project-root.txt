@@ -1,6 +1,6 @@
 *lcd-project-root.txt*  Sets working directory to Git project root or to file's dir.
 
-Set Project Root~
+Set Project Root ~
 
 Copier: Landon Bouma <https://tallybark.com/>
 License: https://creativecommons.org/publicdomain/zero/1.0/
